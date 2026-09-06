@@ -1,4 +1,4 @@
-/* Reset margins and set up the dynamic background */
+/* Keeps the background dynamic */
 body {
     margin: 0;
     padding: 0;
@@ -6,21 +6,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111; /* Default background color */
+    background-color: #111;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: background-image 0.5s ease-in-out; /* Smooth wallpaper transition */
+    transition: background-image 0.5s ease-in-out;
     font-family: sans-serif;
 }
 
-/* Container to perfectly center the buttons */
 .center-container {
     display: flex;
     gap: 20px;
 }
 
-/* Stylish button formatting */
 .music-btn {
     padding: 15px 30px;
     font-size: 18px;
@@ -40,12 +38,12 @@ body {
     transform: scale(1.05);
 }
 
-/* Crucial: Completely hides the YouTube video stream to ensure audio-only */
+/* Moves the native iframe out of view while keeping it active */
 #youtube-audio-player {
-     position: absolute;
-    top: -9999px;
-    left: -9999px;
-    width: 200px;
-    height: 200px;
-    visibility: hidden;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -100px;
+    left: -100px;
+    border: none;
 }
