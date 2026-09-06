@@ -5,12 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const videoId = button.getAttribute('data-video');
-            const bgUrl = button.getAttribute('data-bg');
+            const bgClass = button.getAttribute('data-bg');
 
-            // Change the page wallpaper
-            document.body.style.backgroundImage = `url('${bgUrl}')`;
+            // 1. Wipe out any previously assigned wallpaper classes
+            document.body.className = '';
 
-            // Change the iframe source safely to force autoplay with no restrictions
+            // 2. Assign the new background class name safely 
+            document.body.classList.add(bgClass);
+
+            // 3. Load the corresponding audio track seamlessly
             player.src = `https://youtube.com{videoId}?autoplay=1&enablejsapi=1&origin=${window.location.origin}`;
         });
     });
