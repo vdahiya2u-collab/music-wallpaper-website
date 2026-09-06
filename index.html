@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper & Music Switcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Center Button Container -->
+    <div class="center-container">
+        <!-- Add your YouTube Video IDs in the data-video attribute -->
+        <button class="music-btn" data-video="_7dxX6mF0Iw" data-bg="https://unsplash.com">Beach Vibe</button>
+        <button class="music-btn" data-video="JWtm5vv8FSk" data-bg="https://unsplash.com">Mountain Chill</button>
+        <button class="music-btn" data-video="jVranHKG1gk" data-bg="https://unsplash.com">Space Ambient</button>
+    </div>
+
+    <!-- Hidden YouTube Player Container (Audio Only) -->
+    <div id="youtube-audio-player"></div>
+
+    <!-- Load the YouTube IFrame API and custom script -->
+    <script src="https://youtube.com"></script>
+    <script src="script.js"></script>
+</body>
+</html>

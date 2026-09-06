@@ -1,0 +1,50 @@
+/* Reset margins and set up the dynamic background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111; /* Default background color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out; /* Smooth wallpaper transition */
+    font-family: sans-serif;
+}
+
+/* Container to perfectly center the buttons */
+.center-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Stylish button formatting */
+.music-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.music-btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Crucial: Completely hides the YouTube video stream to ensure audio-only */
+#youtube-audio-player {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
