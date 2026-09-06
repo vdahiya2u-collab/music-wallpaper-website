@@ -40,12 +40,14 @@ body {
 
 /* Moves the native iframe out of view while keeping it active */
 #youtube-audio-player {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: -100px;
-    left: -100px;
+position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 1px;       /* Keep it tiny */
+    height: 1px;      /* Keep it tiny */
     border: none;
+    opacity: 0.01;    /* Make it virtually invisible */
+    pointer-events: none; /* Prevents users from accidentally clicking it */
 }
 
 body.bg-beach {
