@@ -47,3 +47,15 @@ body {
     left: -100px;
     border: none;
 }
+
+body.bg-beach {
+    background-image: url('beach.jpg');
+}
+
+body.bg-mountain {
+    background-image: url('mountain.jpg');
+}
+
+body.bg-space {
+    background-image: url('space.jpg');
+}
