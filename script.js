@@ -7,14 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const videoId = button.getAttribute('data-video');
             const bgClass = button.getAttribute('data-bg');
 
-            // 1. Wipe out any previously assigned wallpaper classes
+            // 1. Swap background classes safely
             document.body.className = '';
-
-            // 2. Assign the new background class name safely 
             document.body.classList.add(bgClass);
 
-            // 3. Load the corresponding audio track seamlessly
-            player.src = `https://youtube.com{videoId}?autoplay=1&enablejsapi=1&origin=${window.location.origin}`;
+            // 2. Re-instantiate the source target with standard parameters to trigger a fresh network query
+            const targetUrl = `https://youtube.com{videoId}?autoplay=1&controls=0&enablejsapi=1`;
+            player.src = targetUrl;
         });
     });
 });
