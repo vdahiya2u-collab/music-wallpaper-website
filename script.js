@@ -12,7 +12,8 @@ function onYouTubeIframeAPIReady() {
             'disablekb': 1,
             'fs': 0,
             'rel': 0,
-	    'origin': 'https://youtube.com'
+	        'origin': window.location.origin,
+			'host': 'https://youtube.com'
         },
         events: {
             'onReady': onPlayerReady
