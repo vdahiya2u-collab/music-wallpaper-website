@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.add(bgClass);
 
             // 2. Re-instantiate the source target with standard parameters to trigger a fresh network query
-            const targetUrl = `https://youtube.com{videoId}?autoplay=1&controls=0&enablejsapi=1`;
+            const targetUrl = `https://youtube.com{videoId}?autoplay=1&controls=0&enablejsapi=1&origin=${window.location.origin}`;
             player.src = targetUrl;
         });
     });
